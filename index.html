@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#091b38" />
+  <title>Feliz vida</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="page-shell">
+    <section class="hero" aria-label="Regalo de cumpleaños">
+      <div class="eyebrow"></div>
+      <h1>Feliz vida,<br /><em>Caty.</em></h1>
+
+      <div id="sceneWrap" class="scene-wrap">
+        <div id="scene" class="scene" aria-label="Caja de regalo 3D interactiva"></div>
+        <svg class="bouquet-illustration" viewBox="0 0 320 360" aria-label="Ramo de tulipanes">
+          <defs>
+            <linearGradient id="petalBack" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffd0dc" />
+              <stop offset=".55" stop-color="#f88eaa" />
+              <stop offset="1" stop-color="#dc5f82" />
+            </linearGradient>
+            <linearGradient id="petalLight" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#fff0f4" />
+              <stop offset=".5" stop-color="#ffb5c9" />
+              <stop offset="1" stop-color="#e87598" />
+            </linearGradient>
+            <linearGradient id="petalDeep" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffb4c8" />
+              <stop offset="1" stop-color="#d9547b" />
+            </linearGradient>
+            <linearGradient id="paperGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#ffe5dc" />
+              <stop offset=".5" stop-color="#f4b9b8" />
+              <stop offset="1" stop-color="#df8d9c" />
+            </linearGradient>
+            <linearGradient id="leafGradient" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#a3d39c" />
+              <stop offset="1" stop-color="#4f956d" />
+            </linearGradient>
+            <g id="bouquetTulip">
+              <path class="tulip-stem" d="M0 242 C-7 190 7 137 0 87" />
+              <path class="tulip-leaf" d="M0 190 C-47 180 -64 143 -47 126 C-18 135 -2 158 0 190Z" />
+              <path class="tulip-bloom tulip-back"
+                d="M-48 88 C-53 48 -33 17 -5 36 C3 5 29 5 39 36 C69 18 84 53 74 88 C63 116 -27 116 -48 88Z" />
+              <path class="tulip-bloom tulip-left"
+                d="M-48 88 C-53 48 -33 17 -5 36 C1 59 0 88 15 107 C-17 113 -41 105 -48 88Z" />
+              <path class="tulip-bloom tulip-center"
+                d="M-5 36 C3 5 29 5 39 36 C37 65 31 94 15 108 C0 93 -3 62 -5 36Z" />
+              <path class="tulip-bloom tulip-right"
+                d="M39 36 C69 18 84 53 74 88 C63 108 38 113 15 108 C31 89 37 63 39 36Z" />
+            </g>
+          </defs>
+          <path class="bouquet-stem"
+            d="M156 274 C146 228 98 183 79 125 M160 274 C163 217 209 164 233 110 M158 274 C157 215 158 163 158 92 M151 275 C125 231 48 212 38 170 M166 274 C196 229 259 211 277 168" />
+          <use href="#bouquetTulip" transform="translate(78 8) rotate(-18) scale(.72)" />
+          <use href="#bouquetTulip" transform="translate(233 1) rotate(17) scale(.74)" />
+          <use href="#bouquetTulip" transform="translate(158 -18) scale(.83)" />
+          <use href="#bouquetTulip" transform="translate(38 66) rotate(-32) scale(.56)" />
+          <use href="#bouquetTulip" transform="translate(277 65) rotate(31) scale(.56)" />
+          <path class="wrapper" d="M54 240 Q160 268 266 240 L292 350 Q160 370 28 350Z" />
+          <path class="wrapper-fold" d="M54 240 Q160 269 266 240 L252 275 Q160 299 68 275Z" />
+          <path class="wrapper-crease" d="M67 277 Q160 300 253 277 M91 290 L76 343 M229 290 L244 343" />
+          <path class="wrapper-ribbon" d="M145 267 L175 267 L185 358 L135 358Z" />
+          <path class="bow"
+            d="M160 278 C143 257 111 251 106 268 C102 283 128 291 158 282 C132 303 143 319 160 287 C177 319 188 303 162 282 C192 291 218 283 214 268 C209 251 177 257 160 278Z" />
+          <circle class="bow-knot" cx="160" cy="279" r="9" />
+        </svg>
+        <div class="scene-glow"></div>
+        <div class="scene-hint">Toca el ramo para descubrir tu mensaje</div>
+      </div>
+
+      <button id="openGift" class="gift-button" type="button">
+        <span>✦</span> Abrir tu regalo <span>✦</span>
+      </button>
+    </section>
+
+    <section id="message" class="message-card" aria-live="polite" hidden>
+      <div class="card-mark"></div>
+      <p class="card-kicker">Feliz cumpleaños, Caty</p>
+      <h2>Feliz vida </h2>
+      <svg class="ecg" viewBox="0 0 500 60" aria-hidden="true">
+        <path class="ecg-base"
+          d="M0 31h130l15-1 12-20 15 39 17-31 12 13h72c24 0 23-19 50-19 28 0 29 38 57 38 27 0 28-19 43-19h77" />
+        <path class="ecg-pulse"
+          d="M0 31h130l15-1 12-20 15 39 17-31 12 13h72c24 0 23-19 50-19 28 0 29 38 57 38 27 0 28-19 43-19h77" />
+      </svg>
+      <p id="letterText" class="letter-text" aria-label="Mensaje para Caty">
+        Que nunca te falten motivos para sonreír, personas que te cuiden y momentos
+        tan bonitos como los que tú haces vivir a los demás. Gracias por tu ternura,
+        por tu forma de iluminar cualquier lugar y por ser simplemente tú.
+        </p>
+        <p class="signature">Con todo mi cariño, <strong>Iván</strong></p>
+
+        <div class="nurse-feature">
+          <div class="nurse-badge">
+            <span class="badge-cross">✚</span>
+            <span>ENFERMERA<br /><strong>DE CORAZÓN</strong></span>
+          </div>
+          <svg class="stethoscope" viewBox="0 0 120 100" aria-label="Estetoscopio decorativo">
+            <path d="M24 12v27a25 25 0 0 0 50 0V12" />
+            <path d="M24 12a7 7 0 1 1-14 0M74 12a7 7 0 1 0 14 0" />
+            <path d="M74 64c0 19 12 25 25 25 10 0 16-7 16-15" />
+            <circle cx="115" cy="72" r="8" />
+          </svg>
+          <p class="nurse-title">Tu turno especial</p>
+          <p class="nurse-copy">Cuidar, acompañar y dar esperanza también es una forma preciosa de amar.</p>
+          <div class="nurse-tags">
+            <span>✚ Vocación</span>
+            <span>♥ Ternura</span>
+            <span>✦ Valentía</span>
+          </div>
+        </div>
+
+        <p class="recognition">Reconocimiento oficial de mi corazón:<br /><strong>la enfermera más especial del mundo</strong></p>
+        <div class="card-footer"><span>♥</span> Hoy celebramos tu vida <span>♥</span></div>
+
+        <button id="surpriseButton" class="surprise-button" type="button">Un mensaje desde mi corazón ♥</button>
+      <p id="surpriseMessage" class="surprise-message" hidden>
+        Caty, si pudiera envolverte todo lo bonito que mereces, lo haría. Mientras tanto,
+        te dejo este pequeño regalo<br /><strong>Te quiero mucho.</strong>
+      </p>
+    </section>
+  </main>
+
+  <audio id="musicPlayer" src="musica.mp3" preload="auto"></audio>
+
+  <div class="floating-words" aria-hidden="true">
+    <span style="--x: 8%; --y: 22%; --delay: 0s">ternura</span>
+    <span style="--x: 83%; --y: 31%; --delay: 1.2s">sonríe</span>
+    <span style="--x: 10%; --y: 72%; --delay: 2.2s">amor</span>
+    <span style="--x: 78%; --y: 76%; --delay: .6s">especial</span>
+  </div>
+
+  <div id="petals" class="petal-layer" aria-hidden="true"></div>
+  <div id="confetti" class="confetti-layer" aria-hidden="true"></div>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>
